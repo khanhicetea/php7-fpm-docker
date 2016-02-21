@@ -25,4 +25,4 @@ RUN curl https://getcomposer.org/installer > composer-setup.php && php composer-
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 EXPOSE 9000
-CMD ["php-fpm"]
+CMD ["php-fpm7.0"]
