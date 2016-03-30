@@ -1,7 +1,7 @@
 FROM ubuntu:trusty
 MAINTAINER  khanhicetea@gmail.com
 
-RUN apt-get install -y curl software-properties-common
+RUN apt-get install -y curl software-properties-common git
 RUN add-apt-repository ppa:ondrej/php
 RUN apt-get update
 RUN apt-get install -y --force-yes php7.0-bcmath php7.0-bz2 php7.0-cli php7.0-common php7.0-curl \
