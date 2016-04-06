@@ -11,7 +11,7 @@ RUN apt-get install -y --force-yes php7.0-bcmath php7.0-bz2 php7.0-cli php7.0-co
                 php7.0-readline php7.0-recode php7.0-soap php7.0-sqlite3 \
                 php7.0-tidy php7.0-xml php7.0-xmlrpc php7.0-xsl php7.0-zip
 
-RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php/7.0/fpm/php.ini
+RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php/7.0/cli/php.ini
 RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php/7.0/fpm/php.ini
 RUN sed -i "s/display_errors = Off/display_errors = On/" /etc/php/7.0/fpm/php.ini
 RUN sed -i "s/upload_max_filesize = .*/upload_max_filesize = 10M/" /etc/php/7.0/fpm/php.ini
