@@ -1,6 +1,7 @@
 FROM ubuntu:trusty
 MAINTAINER  khanhicetea@gmail.com
 
+RUN apt-get update
 RUN apt-get install -y curl software-properties-common git
 RUN add-apt-repository ppa:ondrej/php
 RUN apt-get update
