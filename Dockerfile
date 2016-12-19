@@ -10,7 +10,8 @@ RUN apt-get install -y --force-yes php7.1-bcmath php7.1-bz2 php7.1-cli php7.1-co
                 php7.1-json php7.1-ldap php7.1-mbstring php7.1-mcrypt php7.1-mysql \
                 php7.1-odbc php7.1-opcache php7.1-pgsql php7.1-phpdbg php7.1-pspell \
                 php7.1-readline php7.1-recode php7.1-soap php7.1-sqlite3 \
-                php7.1-tidy php7.1-xml php7.1-xmlrpc php7.1-xsl php7.1-zip
+                php7.1-tidy php7.1-xml php7.1-xmlrpc php7.1-xsl php7.1-zip \
+                tideways php-mongo
 
 RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php/7.1/cli/php.ini
 RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php/7.1/fpm/php.ini
