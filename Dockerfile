@@ -2,7 +2,8 @@ FROM ubuntu:16.04
 MAINTAINER  khanhicetea@gmail.com
 
 RUN apt-get update
-RUN apt-get install -y curl software-properties-common git
+RUN locale-gen en_US.UTF-8
+RUN LANG=en_US.UTF-8 apt-get install -y curl software-properties-common git
 RUN add-apt-repository ppa:ondrej/php
 RUN apt-get update
 RUN apt-get install -y --force-yes php7.1-bcmath php7.1-bz2 php7.1-cli php7.1-common php7.1-curl \
@@ -11,7 +12,7 @@ RUN apt-get install -y --force-yes php7.1-bcmath php7.1-bz2 php7.1-cli php7.1-co
                 php7.1-odbc php7.1-opcache php7.1-pgsql php7.1-phpdbg php7.1-pspell \
                 php7.1-readline php7.1-recode php7.1-soap php7.1-sqlite3 \
                 php7.1-tidy php7.1-xml php7.1-xmlrpc php7.1-xsl php7.1-zip \
-                tideways php-mongo
+                php-tideways php-mongo
 
 RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php/7.1/cli/php.ini
 RUN sed -i "s/;date.timezone =.*/date.timezone = UTC/" /etc/php/7.1/fpm/php.ini
