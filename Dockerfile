@@ -2,12 +2,11 @@ FROM ubuntu:16.04
 MAINTAINER  khanhicetea@gmail.com
 
 RUN apt-get update
-RUN locale-gen en_US.UTF-8
-RUN LANG=en_US.UTF-8 apt-get install -y curl software-properties-common git
+RUN apt-get install -y curl software-properties-common git
 RUN add-apt-repository ppa:ondrej/php
 RUN apt-get update
 RUN apt-get install -y --force-yes php7.1-bcmath php7.1-bz2 php7.1-cli php7.1-common php7.1-curl \
-                php7.1-dev php7.1-fpm php7.1-gd php7.1-gmp php7.1-imap php7.1-intl \
+                php7.1-cgi php7.1-dev php7.1-fpm php7.1-gd php7.1-gmp php7.1-imap php7.1-intl \
                 php7.1-json php7.1-ldap php7.1-mbstring php7.1-mcrypt php7.1-mysql \
                 php7.1-odbc php7.1-opcache php7.1-pgsql php7.1-phpdbg php7.1-pspell \
                 php7.1-readline php7.1-recode php7.1-soap php7.1-sqlite3 \
