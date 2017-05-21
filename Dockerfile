@@ -3,7 +3,7 @@ MAINTAINER  khanhicetea@gmail.com
 
 RUN apt-get update
 RUN apt-get install -y curl software-properties-common git
-RUN add-apt-repository ppa:ondrej/php
+RUN LANG=en_US.UTF-8 add-apt-repository ppa:ondrej/php
 RUN apt-get update
 RUN apt-get install -y --force-yes php7.1-bcmath php7.1-bz2 php7.1-cli php7.1-common php7.1-curl \
                 php7.1-cgi php7.1-dev php7.1-fpm php7.1-gd php7.1-gmp php7.1-imap php7.1-intl \
